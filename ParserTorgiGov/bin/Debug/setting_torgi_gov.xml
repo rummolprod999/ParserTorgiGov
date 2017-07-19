@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<setting>
+	<database>tenders_test</database>
+	<logdir_torgi>log_torgi</logdir_torgi>
+	<prefix></prefix>
+	<userdb>root</userdb>
+	<passdb>1234</passdb>
+	<server>localhost</server>
+	<port>3306</port>
+</setting>

@@ -1,0 +1,10 @@
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/bin/Debug/ParserTorgiGov.exe.config
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/bin/Debug/ParserTorgiGov.exe
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/bin/Debug/ParserTorgiGov.pdb
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/bin/Debug/MySql.Data.dll
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/bin/Debug/Newtonsoft.Json.dll
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/bin/Debug/Newtonsoft.Json.xml
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/obj/Debug/ParserTorgiGov.csprojResolveAssemblyReference.cache
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/obj/Debug/ParserTorgiGov.csproj.CoreCompileInputs.cache
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/obj/Debug/ParserTorgiGov.exe
+/home/alex/RiderProjects/ParserTorgiGov/ParserTorgiGov/obj/Debug/ParserTorgiGov.pdb
