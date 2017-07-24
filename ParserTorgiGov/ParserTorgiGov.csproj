@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectToDb.cs" />
+    <Compile Include="DownloadF.cs" />
     <Compile Include="GetSettings.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="ParserTorg.cs" />
