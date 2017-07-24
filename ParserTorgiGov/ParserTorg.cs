@@ -49,10 +49,10 @@ namespace ParserTorgiGov
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml(xml);
                 string jsons = JsonConvert.SerializeXmlNode(doc);
-                using (StreamWriter sw = new StreamWriter($"{b}.json", false, System.Text.Encoding.Default))
+                /*using (StreamWriter sw = new StreamWriter($"{b}.json", false, System.Text.Encoding.Default))
                 {
                     sw.WriteLine(jsons);
-                }
+                }*/
                 JObject json = JObject.Parse(jsons);
             }
         }
