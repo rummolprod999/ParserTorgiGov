@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
 using System.Xml;
 using System.Xml.Linq;
 using MySql.Data.MySqlClient;
@@ -54,6 +57,32 @@ namespace ParserTorgiGov
                     sw.WriteLine(jsons);
                 }*/
                 JObject json = JObject.Parse(jsons);
+                JObject root = (JObject) json.SelectToken("openData");
+                /*JProperty firstOrDefault = root.Properties().FirstOrDefault(pr => pr.Name.Contains("notification"));
+                if (firstOrDefault != null)
+                {
+                    JToken notif = firstOrDefault.Value;
+                    Console.WriteLine(notif);
+                }*/
+                List<JToken> notifications = Tools.GetElements(root, "notification");
+                foreach (var n in notifications)
+                {
+                    string bidNumber = ((string) n.SelectToken("bidNumber") ?? "").Trim();
+                    string publishDate = (JsonConvert.SerializeObject(n.SelectToken("publishDate") ?? "") ??
+                                          "").Trim('"');
+                    string lastChanged = (JsonConvert.SerializeObject(n.SelectToken("lastChanged") ?? "") ??
+                                          "").Trim('"');
+                    int isArchived = (int?) n.SelectToken("isArchived") ?? 0;
+
+                    switch (b)
+                    {
+                       case 1:
+                           TorgBidKind1 t1 = new TorgBidKind1(bidNumber, publishDate, lastChanged, isArchived);
+                           t1.Parse();
+                           break;
+                    }
+                    
+                }
             }
         }
 
