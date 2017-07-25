@@ -11,8 +11,12 @@
         {
             if (TestIdent())
             {
+                Log.Logger("Такой торг уже есть в базе", bidNumber);
                 return;
             }
+            int Cancel = GetCancel();
+            
+            
         }
     }
 }
