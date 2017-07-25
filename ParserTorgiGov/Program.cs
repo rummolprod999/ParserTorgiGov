@@ -90,8 +90,10 @@ namespace ParserTorgiGov
         private static void ParserTorg(TypeArguments arg)
         {
             Log.Logger("Время начала парсинга Torgi");
-            ParserTorg p = new ParserTorg(Periodparsing);
-            p.Parsing();
+            /*ParserTorg p = new ParserTorg(Periodparsing);
+            p.Parsing();*/
+            DateTime date_now = DateTime.Parse("2017-07-17T11:50:52");
+            Console.WriteLine($"{date_now:yyyy-MM-dd HH:mm:ss}");
             Log.Logger("Время окончания парсинга Torgi");
 
         }

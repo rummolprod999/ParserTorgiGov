@@ -9,7 +9,10 @@
 
         public override void Parse()
         {
-            
+            if (TestIdent())
+            {
+                return;
+            }
         }
     }
 }

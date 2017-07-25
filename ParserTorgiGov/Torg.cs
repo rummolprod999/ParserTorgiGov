@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 
 namespace ParserTorgiGov
 {
@@ -24,6 +25,28 @@ namespace ParserTorgiGov
         public virtual void Parse()
         {
             
+        }
+
+        public bool TestIdent()
+        {
+            string selectT = $"SELECT id FROM {Program.Prefix}torgi_bid_kind_id_{b} WHERE bidNumber = @bidNumber AND lastChanged = @lastChanged";
+            DateTime dateNow = DateTime.Parse(lastChanged);
+            string d = $"{dateNow:yyyy-MM-dd HH:mm:ss}";
+            using (MySqlConnection connect = ConnectToDb.GetDbConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(selectT, connect);
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@bidNumber", bidNumber);
+                cmd.Parameters.AddWithValue("@lastChanged", d);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Close();
+                    return true;
+                }
+                reader.Close();
+            }
+            return false;
         }
     }
 }
