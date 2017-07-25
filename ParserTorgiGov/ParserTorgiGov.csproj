@@ -50,7 +50,9 @@
     <Compile Include="ConnectToDb.cs" />
     <Compile Include="DownloadF.cs" />
     <Compile Include="GetSettings.cs" />
+    <Compile Include="IParser.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="ParserTorg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

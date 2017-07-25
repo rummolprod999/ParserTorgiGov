@@ -9,13 +9,16 @@ namespace ParserTorgiGov
         protected readonly string lastChanged;
         protected readonly int isArchived;
         protected readonly int b;
-        public Torg(string bidNumber, string publishDate, string lastChanged, int isArchived, int b)
+        protected readonly string odDetailedHref;
+        
+        public Torg(string bidNumber, string publishDate, string lastChanged, int isArchived, int b, string odDetailedHref)
         {
             this.bidNumber = bidNumber;
             this.publishDate = publishDate;
             this.lastChanged = lastChanged;
             this.isArchived = isArchived;
             this.b = b;
+            this.odDetailedHref = odDetailedHref;
         }
 
         public virtual void Parse()
