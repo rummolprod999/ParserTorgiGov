@@ -27,6 +27,11 @@ namespace ParserTorgiGov
                 int b = (int) row["bid_kind_id"];
                 string PathParse = ParseUrl.Replace("{bidKind}", b.ToString());
                 string xml = DownloadF.DownL(PathParse);
+                if (String.IsNullOrEmpty(xml))
+                {
+                    Log.Logger("Получили пустую строку со списком торгов", PathParse);
+                    continue;
+                }
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml(xml);
                 string jsons = JsonConvert.SerializeXmlNode(doc);
