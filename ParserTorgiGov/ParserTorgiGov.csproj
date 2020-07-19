@@ -56,6 +56,7 @@
     <Compile Include="ParserTorg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimedWebClient.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="Torg.cs" />
     <Compile Include="TorgBidKind1.cs" />

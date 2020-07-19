@@ -14,7 +14,7 @@ namespace ParserTorgiGov
             {
                 try
                 {
-                    tmp = new WebClient().DownloadString(url);
+                    tmp = new TimedWebClientUaEis().DownloadString(url);
                     break;
                 }
                 catch (Exception e)
